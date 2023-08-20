@@ -7,21 +7,24 @@ const teamMembers = [
     semester: '7th',
     institute: 'Assam Down Town Unniversity',
     role: 'Designer & Developer',
-    avatar: '/Avatars/shafin.jpeg'
+    avatar: '/Avatars/shafin.jpeg',
+    link: 'https://shafin.vercel.app'
   },
   {
     name: 'Kaustav Pratick Hazarika',
     semester: '7th',
     institute: 'Assam Down Town Unniversity',
     role: 'Researcher',
-     avatar: '/Avatars/kaustav.jpeg'
+    avatar: '/Avatars/kaustav.jpeg',
+    link: 'https://www.linkedin.com/in/kaustav-pratick-hazarika-4198b3257/'
   },
   {
     name: 'Alak Sen',
     semester: '7th',
     institute: 'Assam Down Town Unniversity',
     role: 'Thesis Writer',
-     avatar: '/Avatars/alaksen.jpeg'
+    avatar: '/Avatars/alaksen.jpeg',
+    link: 'https://www.linkedin.com/in/alak-sen-1173551bb/'
   },
 ];
 

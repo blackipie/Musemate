@@ -21,7 +21,7 @@ const MenuSideBar = () => {
   { link: '/', icon: <LayoutDashboardIcon />, label: 'Home' },
   { link: '/docs', icon: <FileStack/>, label: 'Documents' },
   { link: '/our-team', icon: <Users2/>, label: 'Team Members' },
-  { link: 'https://github.com/blackipie/devsects', icon: <Code2/>, label: 'Code' },
+  { link: 'https://github.com/blackipie/Musemate', icon: <Code2/>, label: 'Code' },
 ];
 
   return (

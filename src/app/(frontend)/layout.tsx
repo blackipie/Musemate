@@ -5,6 +5,7 @@ import {  Montserrat } from 'next/font/google'
 import SideBar from '@/components/Shared/Sidebar'
 import { MenuProvider } from '@/components/Providers/MenuProvider'
 import Navbar from '@/components/Shared/Menu/Header'
+import ProgressbarProvider from '@/components/Providers/progressbarProvider'
 const Monts = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -25,15 +26,17 @@ export default function RootLayout({
       </head>
     <body className={`${Monts.className} text-neutral-50 w-full h-full`} >
 
-     <MenuProvider>
+        <ProgressbarProvider>
+               <MenuProvider>
           <div className="flex w-full ">
               <SideBar />
                <main className="flex-1 w-full lg:pl-[300px]  p-4 pb-8">
-                 <Navbar/>        
+                <Navbar />    
                    {children}
                 </main>
           </div> 
       </MenuProvider>
+       </ProgressbarProvider>
 
       </body>
     </html>

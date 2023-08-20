@@ -4,8 +4,7 @@
 
 import { ChevronRight} from "lucide-react";
 import Button from "../Buttons/ButtonOne";
-import { useRouter } from "next/navigation"
-
+import { useRouter } from 'next-nprogress-bar';
 // components/Card.tsx
 interface CardProps {
   title: string;
