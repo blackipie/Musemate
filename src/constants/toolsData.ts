@@ -13,7 +13,7 @@ export const SecuritytoolsData:CardData[] = [
     title: "Password Generator",
     description: "Generate secure passwords with strength analysis.",
     link: "/password-generator",
-    icon: "/passtool.jpg", 
+    icon: "/icons/passtool.jpg", 
   },
 
   {
