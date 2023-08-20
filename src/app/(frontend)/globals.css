@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: rgba(41, 40, 40, 0);
+  --secondary: rgba(47, 47, 48, 0.712);
+}
+
+:root,body, html{
+background: rgb(16, 16, 17) ;
+ -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ -webkit-tap-highlight-color: transparent;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+}
+
+.bg-body{
+background: rgb(16, 16, 17) ;
+
+}
+.sidebar{
+background: rgb(24, 24, 24) ;
+
+}
+/* Scrollbar styling */
+
+.scroll-style{
+  scrollbar-width: thin;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(49, 49, 50, 0.853) rgba(129, 129, 133, 0.853);
+}
+
+/* firefox */
+pre>code{
+  scrollbar-width: none;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  scroll-behavior: smooth;
+}
+
+
+pre>code::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 2px;
+  border: 2px solid var(--primary);
+}
