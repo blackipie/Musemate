@@ -14,7 +14,7 @@ const WhoisChecker: React.FC = () => {
     setLoading(true)
     setWhoisData(null)
     const response = await axios.post(
-      `http://localhost:3000/api/whois/`,
+      `/api/whois/`,
       {
          domain
       }, // Send domain as JSON payload
