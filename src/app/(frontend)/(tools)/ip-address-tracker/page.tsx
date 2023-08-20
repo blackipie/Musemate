@@ -68,7 +68,7 @@ const IPAddressTracker = () => {
 
       {ip && (
         <p className="mb-2">
-          Your Current IP Address: {ip}
+           IP Address: {ip}
         </p>
       )}
 
