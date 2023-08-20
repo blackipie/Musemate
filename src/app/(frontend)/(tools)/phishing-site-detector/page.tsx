@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react';
 import axios from 'axios';
+import InputWithButton from '@/components/SecurityToolComponents/inputWithButton';
 
 const PhishingDetector = () => {
   const [url, setUrl] = useState('');
@@ -43,23 +44,16 @@ const PhishingDetector = () => {
   return (
     <div className="container mx-auto mt-10 p-4">
       <h1 className="text-2xl sm:text-5xl font-extrabold mb-8 ">Phishing site detector</h1>
-      <div className="flex items-center">
-      <input
-  type="text"
-  placeholder="Enter URL"
-  value={url}
-  onChange={(e) => setUrl(e.target.value)}
-                  className=" rounded  bg-neutral-950 
-  text-white outline-none  ring-1 ring-neutral-700
-  focus:border-neutral-700 focus:bg-neutral-800 
-   transition-all duration-300 flex-grow mr-2 p-6"
-/>
-              <button onClick={checkPhishing} className="bg-neutral-900 ring-1 ring-neutral-800 
-          hover:opacity-70 p-6 rounded font-semibold "
-               disabled={!isValidURL(url)} >
-          Check
-        </button>
-      </div>
+        <InputWithButton
+        placeholder="Enter a valid url"
+        value={url}
+        onChange={(e) => setUrl(e.target.value)}
+        onClick={checkPhishing}
+        disabled={!isValidURL(url)}
+        btnContent={'Check'}
+      />
+
+  
           <div className={`flex p-4 min-h-[4rem] bg-neutral-950 mt-12 
               rounded text-xl font-normal font-mono ring-1 
               ring-neutral-900 ${isPhishing===null&&'hidden'}`}>

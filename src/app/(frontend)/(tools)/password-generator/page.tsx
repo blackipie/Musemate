@@ -4,6 +4,7 @@ import { useState } from 'react';
 import zxcvbn from 'zxcvbn';
 import cryptoRandomString from 'crypto-random-string';
 import { Eye, EyeOff } from 'lucide-react';
+import InputWithButton from '@/components/SecurityToolComponents/inputWithButton';
 
 const PasswordStrengthChecker = () => {
   const [password, setPassword] = useState('');
@@ -35,35 +36,17 @@ const [showPassword, setShowPassword] = useState(false);
     return (
  <div className="container mx-auto mt-10 p-4 space-y-4">
       <h1 className="text-2xl sm:text-5xl font-extrabold mb-8 ">Password Generator</h1>
-      <div className="flex flex-row items-center">
-
-      <input
+        
+       <InputWithButton
         type={showPassword ? 'text' : 'password'}
-        placeholder="Enter password"
+        placeholder="Enter a domain name (example.com)"
         value={password}
         onChange={handleChange}
-          className=" rounded  bg-neutral-950 
-  text-white outline-none  ring-1 ring-neutral-700
-  focus:border-neutral-700 focus:bg-neutral-800 
-   transition-all duration-300 flex-grow mr-2 p-6"
-          />
-          
-           <button
-          className="bg-neutral-900 ring-1 ring-neutral-800 
-          hover:opacity-70 p-6 rounded font-semibold "
-          onClick={toggleShowPassword}
-        >
-              {showPassword ? ( 
-               
-              <Eye/>
-               
-                  ) : (
-                         
-                  <EyeOff/>
-                  )}
-                </button>
-    </div>
-                
+        onClick={toggleShowPassword}
+        disabled={password.length < 1 || password.trim() === ''}
+        btnContent={showPassword ? ( <Eye/>) : ( <EyeOff/> )}
+      />
+         
       <div className="relative h-2 bg-gray-200 w-full rounded">
         <div
           className={`absolute top-0 left-0  h-2 rounded ${
