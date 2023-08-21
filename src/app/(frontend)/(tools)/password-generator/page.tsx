@@ -44,7 +44,7 @@ const [showPassword, setShowPassword] = useState(false);
         onChange={handleChange}
         onClick={toggleShowPassword}
         disabled={password.length < 1 || password.trim() === ''}
-        btnContent={showPassword ? ( <Eye/>) : ( <EyeOff/> )}
+        btnContent={showPassword ? ( <><Eye/> Hide  </>) : (<><EyeOff/> Show </>   )}
       />
          
       <div className="relative h-2 bg-gray-200 w-full rounded">

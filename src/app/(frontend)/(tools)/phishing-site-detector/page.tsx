@@ -50,7 +50,7 @@ const PhishingDetector = () => {
         onChange={(e) => setUrl(e.target.value)}
         onClick={checkPhishing}
         disabled={!isValidURL(url)}
-        btnContent={'Check'}
+        btnContent={'Detect'}
       />
 
   

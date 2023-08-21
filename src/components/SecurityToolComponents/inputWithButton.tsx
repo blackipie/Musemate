@@ -20,7 +20,7 @@ const InputWithButton: React.FC<InputWithButtonProps> = ({
   type
 }) => {
   return (
-    <div className="flex flex-wrap items-center gap-2 w-full justify-between">
+    <div className="flex  items-center gap-2 w-full justify-between">
         <input
         type={type ||'text' }
         placeholder={placeholder}
@@ -30,7 +30,7 @@ const InputWithButton: React.FC<InputWithButtonProps> = ({
       />
       <button
         onClick={onClick}
-        className="bg-neutral-900 flex-grow sm:flex-grow-0 ring-1 ring-neutral-800 hover:opacity-70 rounded font-semibold p-6"
+        className="bg-neutral-900 items-center flex gap-2 flex-grow sm:flex-grow-0 ring-1 ring-neutral-800 hover:opacity-70 rounded font-semibold p-6 justify-center whitespace-nowrap"
         disabled={disabled}
       >
         {btnContent}

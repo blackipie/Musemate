@@ -53,7 +53,7 @@ const WhoisChecker: React.FC = () => {
   
   <SimpleLoader isLoading={isloading} />
  {whoisData && (
-  <div className="bg-neutral-800 p-4 rounded flex">
+  <div className="bg-neutral-800 p-4 rounded flex overflow-auto">
     <pre className="text-white whitespace-pre-wrap">{whoisData}</pre>
   </div>
           )  
