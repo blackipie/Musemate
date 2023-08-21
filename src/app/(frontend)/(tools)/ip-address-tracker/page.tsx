@@ -16,6 +16,7 @@ const IPAddressTracker = () => {
     // Fetch the user's current IP address using an external service
     const fetchCurrentIPAddress = async () => {
       try {
+       
         setLoading(true)
         const response = await axios.get('https://api64.ipify.org?format=json');
         setIPAddress(response.data.ip);
@@ -44,6 +45,7 @@ const IPAddressTracker = () => {
       const { ipHtml} = response.data
       setIPDetails(ipHtml);
     } catch (error) {
+      setIPDetails(false);
       console.error('Error fetching IP details:', error);
     } finally {
          setLoading(false)
@@ -58,7 +60,7 @@ const IPAddressTracker = () => {
             
        <InputWithButton
         type={ 'text' }
-        placeholder="Enter a domain name (example.com)"
+        placeholder="Enter a Ip or domain name"
         value={ip}
         onChange={(e) => setIPAddress(e.target.value)}
         onClick={fetchIPDetails}
@@ -79,6 +81,9 @@ const IPAddressTracker = () => {
           <h2 className="text-xl font-semibold mb-2">IP Address Details</h2>   
             <div dangerouslySetInnerHTML={{ __html: ipDetails }} />
         </div>
+      )}
+      {ipDetails === false&& (
+        <>Please enter valid IP Address.</>
       )}
     </div>
   );

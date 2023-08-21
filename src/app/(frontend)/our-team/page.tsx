@@ -22,7 +22,7 @@ const teamMembers = [
     name: 'Alak Sen',
     semester: '7th',
     institute: 'Assam Down Town Unniversity',
-    role: 'Thesis Writer',
+    role: 'Dissertation Writer',
     avatar: '/Avatars/alaksen.jpeg',
     link: 'https://www.linkedin.com/in/alak-sen-1173551bb/'
   },

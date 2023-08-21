@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import zxcvbn from 'zxcvbn';
 import cryptoRandomString from 'crypto-random-string';
-import { Eye, EyeOff } from 'lucide-react';
+import { Copy, CopyCheck,  Eye, EyeOff } from 'lucide-react';
 import InputWithButton from '@/components/SecurityToolComponents/inputWithButton';
 
 const PasswordStrengthChecker = () => {
@@ -33,6 +33,21 @@ const [showPassword, setShowPassword] = useState(false);
     setShowPassword(!showPassword);
   };
 
+ // Create a copy to clipboard button
+    const [copied, setCopy] = useState(false);
+    const copyToClipboard = async (text:string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log("Text copied to clipboard!");
+      setCopy(true)
+      setTimeout(() => setCopy(false), 1000);
+    } catch (err) {
+      console.error("Failed to copy text:", err);
+    }
+  };
+
+
+
     return (
  <div className="container mx-auto mt-10 p-4 space-y-4">
       <h1 className="text-2xl sm:text-5xl font-extrabold mb-8 ">Password Generator</h1>
@@ -40,7 +55,8 @@ const [showPassword, setShowPassword] = useState(false);
        <InputWithButton
         type={showPassword ? 'text' : 'password'}
         placeholder="Enter a domain name (example.com)"
-        value={password}
+        value={password.trim()}
+        id='copypass'
         onChange={handleChange}
         onClick={toggleShowPassword}
         disabled={password.length < 1 || password.trim() === ''}
@@ -62,12 +78,27 @@ const [showPassword, setShowPassword] = useState(false);
           }`}
         />
       </div>
-      <button
+      <div className='flex items-center gap-3'>
+             <button
         onClick={generateStrongPassword }
         className="bg-neutral-800 text-white px-4 py-2 rounded"
       >
-        Generate Strong Password
+        Generate
       </button>
+      <button
+         onClick={() => {
+          const inputElement = document.getElementById('copypass') as HTMLInputElement;
+          const textToCopy = inputElement.value;
+              if (textToCopy) {
+            copyToClipboard(textToCopy);
+          }
+        }}
+            className="bg-neutral-800 hover:opacity-80 text-white px-4 py-2 rounded"
+            id='copybutton'
+      >
+       {copied?<CopyCheck/>:<Copy/>}
+      </button>
+   </div>
     </div>
   );
 };

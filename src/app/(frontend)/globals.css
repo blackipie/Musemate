@@ -34,7 +34,7 @@ background: rgb(24, 24, 24) ;
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(49, 49, 50, 0.853) rgba(129, 129, 133, 0.853);
+  scrollbar-color: rgba(49, 49, 50, 0) rgba(38, 38, 38, 0);
 }
 
 /* firefox */
@@ -58,11 +58,11 @@ pre>code::-webkit-scrollbar {
 
 *::-webkit-scrollbar-track {
   background: var(--primary);
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--secondary);
-  border-radius: 2px;
+  border-radius: 1px;
   border: 2px solid var(--primary);
 }

@@ -1,6 +1,6 @@
 'use client'
 import { FC } from 'react';
-import Card from '../Cards/CardOne';
+import Card from '../Cards/CardTools';
 import {CardData} from '@/constants/toolsData';
 
 interface CardSectionProps {

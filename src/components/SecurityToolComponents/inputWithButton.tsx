@@ -8,6 +8,7 @@ interface InputWithButtonProps {
     disabled: boolean;
     btnContent: any;
     type?: string
+    id?: string
 }
 
 const InputWithButton: React.FC<InputWithButtonProps> = ({
@@ -17,7 +18,8 @@ const InputWithButton: React.FC<InputWithButtonProps> = ({
   onClick,
     disabled,
     btnContent,
-  type
+  type,
+  id
 }) => {
   return (
     <div className="flex  items-center gap-2 w-full justify-between">
@@ -27,6 +29,7 @@ const InputWithButton: React.FC<InputWithButtonProps> = ({
         value={value}
         onChange={onChange}
         className="rounded bg-neutral-950 text-white outline-none ring-1 ring-neutral-700 focus:border-neutral-700 flex-grow w-full sm:w-auto focus:bg-neutral-800 transition-all duration-300 p-6"
+        id={id}
       />
       <button
         onClick={onClick}

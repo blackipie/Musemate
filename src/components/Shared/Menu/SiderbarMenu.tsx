@@ -9,9 +9,9 @@ import {
 
     LayoutDashboardIcon,
     X,
-   FileStack,
     Users2,
-    Code2
+    Code2,
+    Files
 } from 'lucide-react';
 
 const MenuSideBar = () => {
@@ -19,9 +19,9 @@ const MenuSideBar = () => {
     const { showMenuVisibility } = useMenu();
     const menuItems = [
   { link: '/', icon: <LayoutDashboardIcon />, label: 'Home' },
-  { link: '/docs', icon: <FileStack/>, label: 'Documents' },
-  { link: '/our-team', icon: <Users2/>, label: 'Team Members' },
-  { link: 'https://github.com/blackipie/Musemate', icon: <Code2/>, label: 'Code' },
+  { link: '/docs', icon: <Files />, label: 'Documents' },
+  { link: '/our-team', icon: <Users2 />, label: 'Team Members' },
+  { link: 'https://github.com/blackipie/Musemate', icon: <Code2 />, label: 'Code' },
 ];
 
   return (
@@ -38,8 +38,9 @@ const MenuSideBar = () => {
           <div className='pt-12 lg:pt-0 '>
               {menuItems.map((item) => (
               <List link={item.link} effect="none" key={item.link}
-     className={`font-semibold  ${ path===item.link?'ring-1 text-neutral-100 rounded-md ring-neutral-800 bg-neutral-800':''  }`}>
-                {item.icon} {item.label}
+     className={`font-semibold  ${ path===item.link?' text-white rounded-md  bg-neutral-800':''  }`}>
+                 <span className={`${path===item.link&&' text-red-600'}`}> {item.icon}</span>
+                  {item.label}
               </List>
 
          ))}

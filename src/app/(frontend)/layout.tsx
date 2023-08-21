@@ -6,7 +6,8 @@ import SideBar from '@/components/Shared/Sidebar'
 import { MenuProvider } from '@/components/Providers/MenuProvider'
 import Navbar from '@/components/Shared/Menu/Header'
 import ProgressbarProvider from '@/components/Providers/progressbarProvider'
-const Monts = Montserrat({ subsets: ['latin'] })
+import { Toaster } from 'react-hot-toast'
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Musemate',
@@ -24,7 +25,7 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="/logo-t.svg" type="image/x-icon" />
       </head>
-    <body className={`${Monts.className} text-neutral-50 w-full h-full`} >
+    <body className={`${montserrat.className} text-neutral-50 w-full h-full`} >
 
         <ProgressbarProvider>
                <MenuProvider>
@@ -32,6 +33,7 @@ export default function RootLayout({
               <SideBar />
                <main className="flex-1 w-full lg:pl-[300px]  p-4 pb-8">
                 <Navbar />    
+                   <Toaster/>
                    {children}
                 </main>
           </div> 
