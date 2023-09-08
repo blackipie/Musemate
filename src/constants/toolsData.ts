@@ -41,13 +41,13 @@ export const SecuritytoolsData:CardData[] = [
     icon: "/icons/search.svg", 
   },
 
-  {
-    id:5,
-    title: "Link Expander/Analyzer",
-    description: "A tool that expands shortened URLs and provides a preview of the destination site.",
-    link: "link-expander",
-    icon: "/icons/search.svg", 
-  },
+  // {
+  //   id:5,
+  //   title: "Link Expander/Analyzer",
+  //   description: "A tool that expands shortened URLs and provides a preview of the destination site.",
+  //   link: "link-expander",
+  //   icon: "/icons/search.svg", 
+  // },
 
 
 
