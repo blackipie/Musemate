@@ -3,18 +3,10 @@ import TeamCard from '@/components/Cards/TeamCard'
 
 const teamMembers = [
   {
-    name: 'Kaustav Pratick Hazarika',
-    semester: '7th',
-    institute: 'Assam Down Town Unniversity',
-    role: 'Team Leader',
-    avatar: '/Avatars/kaustav.jpeg',
-    link: 'https://www.linkedin.com/in/kaustav-pratick-hazarika-4198b3257/'
-  },
-  {
     name: 'Masud Shafin Ahmed',
     semester: '7th',
     institute: 'Assam Down Town Unniversity',
-    role: 'Designer & Developer',
+    role: 'Developer',
     avatar: '/Avatars/shafin.jpeg',
     link: 'https://shafin.vercel.app'
   },
@@ -22,7 +14,7 @@ const teamMembers = [
     name: 'Alak Sen',
     semester: '7th',
     institute: 'Assam Down Town Unniversity',
-    role: 'Dissertation Writer',
+    role: 'Helper & Dissertation Writer',
     avatar: '/Avatars/alaksen.jpeg',
     link: 'https://www.linkedin.com/in/alak-sen-1173551bb/'
   },
